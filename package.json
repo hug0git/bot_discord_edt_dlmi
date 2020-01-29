@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hug0git/bot_discord_edt_dlmi/issues"
   },
-  "homepage": "https://hug0.xyz"
+  "homepage": "https://hug0.xyz",
+  "dependencies": {
+    "ical": "^0.6.0"
+  }
 }
