@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const { prefix, urledt } = require('./config.json');
-const token = process.env.BOTDEDTDLMITOKEN
+const token = process.env.BOTEDTDLMITOKEN
 const fs = require('fs');
 const client = new Discord.Client();
 
