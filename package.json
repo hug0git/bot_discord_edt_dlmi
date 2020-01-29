@@ -17,6 +17,7 @@
   },
   "homepage": "https://hug0.xyz",
   "dependencies": {
+    "discord.js": "^11.5.1",
     "ical": "^0.6.0"
   }
 }
