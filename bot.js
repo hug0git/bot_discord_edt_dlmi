@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { prefix, urledt } = require('./config.json');
+const { prefix } = require('./config.json');
 const token = process.env.BOTEDTDLMITOKEN
 const fs = require('fs');
 const client = new Discord.Client();
@@ -10,7 +10,7 @@ const commandFiles = fs.readdirSync('./modules/commands').filter(file => file.en
 for (const file of commandFiles) {
     const command = require(`./modules/commands/${file}`);
     client.commands.set(command.name, command);
-} ''
+} 
 
 fs.readdir("./modules/events/", (err, files) => {
     if (err) return console.error(err);

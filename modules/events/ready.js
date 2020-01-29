@@ -6,4 +6,7 @@ module.exports = (client) => {
             type: 'WATCHING'
         }
     })
+    for (const commands of client.commands) {
+        console.logs(commands)
+    } 
 }
