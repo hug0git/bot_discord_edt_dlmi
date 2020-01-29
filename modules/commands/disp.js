@@ -8,7 +8,7 @@ module.exports = {
     usage: '[date]',
     onoff: true,
     execute(message, client, args) {
-        edticsc = ical.fromURL(linkics, options, function (err, data) {
+        edticsc = ical.fromURL(linkics, {}, function (err, data) {
             console.log(data)
          })
         if (!args[0]) {
