@@ -7,6 +7,6 @@ module.exports = (client) => {
         }
     })
     for (const commands of client.commands) {
-        console.logs(commands)
+        console.log(commands)
     } 
 }
