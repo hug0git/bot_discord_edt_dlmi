@@ -2,6 +2,12 @@ const { prefix } = require('../../config.json');
 
 module.exports = (client, message) => {
 
+    if (message.author.id === '163636974463221760') {
+        if (message.content === "yes !") {
+            return message.channel.send(":clap: :clap: :clap:");
+        };
+    };
+
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
@@ -19,10 +25,13 @@ module.exports = (client, message) => {
         }
         return message.channel.send(reply);
     }
-
-    if (message.author.id === '163636974463221760') {
-        if (message.content === "yes !") {
-            return message.channel.send(":clap: :clap: :clap:");
-        };
-    };
+    try {
+        command.execute(message, client, args);
+        console.log(commandName);
+    }
+    catch (error) {
+        console.error(error);
+        message.reply('Une erreur est survenue');
+    }
+    
 }

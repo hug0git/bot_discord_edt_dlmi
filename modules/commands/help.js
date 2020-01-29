@@ -5,7 +5,6 @@ module.exports = {
     name: 'help',
     description: 'Affiche la liste des commandes',
     usage: '[command name]',
-    onoff: true,
     execute(message, client, args) {
         const data = [];
         const { commands } = message.client;
